@@ -648,12 +648,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad94ae3b0d3ac24daba017384a60b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxDistanceOffset: {x: 0.01, y: 3}
-  _whatIsWall:
+  maxDistanceOffset: {x: 2.5, y: 2.5}
+  whatIsWall:
     serializedVersion: 2
-    m_Bits: 192
-  _rayLength: 5
-  _smoothTime: 40
+    m_Bits: 128
+  rayLength: 0.1
+  smoothTime: 0.5
 --- !u!114 &1057434730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,13 +666,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0782d8fa1ad164aa40602ecc736e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controlSpeed: 1.5
-  _cameraVerticalMaxAngle: 65
-  _cameraVerticalMinAngle: -65
-  _smoothRotationTime: 0.15
-  _positionOffset: 0.01
-  _positionSmoothTime: 20
-  _lookTarget: {fileID: 1567830775}
+  controlSpeed: 1
+  cameraVerticalMaxAngle: 60
+  cameraVerticalMinAngle: -60
+  smoothRotationTime: 0.15
+  positionOffset: 0.01
+  positionSmoothTime: 20
+  lookTarget: {fileID: 1567830775}
 --- !u!1 &1567830774
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 1567830774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9, z: 0}
+  m_LocalPosition: {x: 0, y: 1.203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5895,7 +5895,6 @@ GameObject:
   - component: {fileID: 152622842174520048}
   - component: {fileID: 8418454727585334531}
   - component: {fileID: 8418454727585334532}
-  - component: {fileID: 8418454727585334533}
   m_Layer: 8
   m_Name: "\u5B89\u6BD4"
   m_TagString: Player
@@ -5941,29 +5940,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533ed36f19791a44498abc6d6a49392c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _groundDetectionPositionOffset: -0.15
-  _detectionRang: 0.25
-  whatisGround:
+  groundDetectionPositionOffset: -0.15
+  detectionRang: 0.25
+  whatIsGround:
     serializedVersion: 2
     m_Bits: 192
-  _rotationSmoothTime: 0.15
-  _isLock: 0
-  _slowFootTime: 0.39
-  _fastFootTime: 0.3
-  _parryFootTime: 0
-  _canTurnAndRun: 0
---- !u!114 &8418454727585334533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8418454727585334530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07f38cb7f9da75646afefb58dd8a258a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  rotationSmoothTime: 0.15
+  isLock: 0
+  slowFootTime: 0.39
+  fastFootTime: 0.3
+  parryFootTime: 0
+  canTurnAndRun: 1
 --- !u!1 &8432941577592492080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6303,8 +6290,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 410087041}
   - {fileID: 471961231}
   - {fileID: 5581504354920603125}
   - {fileID: 1057434728}
